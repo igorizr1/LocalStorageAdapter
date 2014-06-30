@@ -1,4 +1,4 @@
-angular.module('LocalStorageAdapter', [])
+angular.module('LocalStorageAdapter', ["general.config"])
 .factory('LocalStorageService', function(GENERAL_CONFIG) {
 
     var Storage = localStorage,
