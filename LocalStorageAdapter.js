@@ -1,5 +1,5 @@
 angular.module('LocalStorageAdapter', ["general.config"])
-.factory('LocalStorageService', function(GENERAL_CONFIG) {
+.factory('LocalStorageAdapter', function(GENERAL_CONFIG) {
 
     var Storage = localStorage,
         APP_NAME = (GENERAL_CONFIG.APP_NAME + "_");
@@ -34,5 +34,3 @@ angular.module('LocalStorageAdapter', ["general.config"])
     };
 
 });
-
-
