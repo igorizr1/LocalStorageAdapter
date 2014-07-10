@@ -2,7 +2,7 @@
     var
     config_data = {
         GENERAL_CONFIG: {
-            APP_NAME: "MovieFish"
+            APP_NAME: "Your app name..."
         }
     },
     /* set settings */
