@@ -7,10 +7,10 @@ angular.module('LocalStorageAdapter', ["general.config"])
             try {
                 if(arguments.length === 0)return true;
                 for(var i = 0; i<arguments.length; ++i)
-                    if(!is_set(arguments[i]))
+                    if(!arguments[i])
                         return true;
                     else
-                        if(is_array(arguments[i]) && arguments[i].length === 0)
+                        if((arguments[i] instanceof Array) && arguments[i].length === 0)
                             return true;
                         else if(typeof(arguments[i]) === "object" && Object.keys(arguments[i]).length === 0)
                             return true;
