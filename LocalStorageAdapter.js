@@ -50,7 +50,29 @@ angular.module('LocalStorageAdapter', ["general.config"])
             else if(!(current_value instanceof Array))
                 return false;
             current_value.push(v);
-            return this.set(k, current_value); 
+            return this.set(k, current_value);
+        },
+        object_push : function(k, v){
+            var current_value = this.get(k);
+            if(empty(current_value))
+                current_value = {};
+            else if( (current_value instanceof Array) || (typeof(current_value) === "string") || (typeof(current_value) === "number") )
+                return false;
+            if(Object.keys(v).length > 1 || Object.keys(v).length === 0)return false;
+            var key = Object.keys(v)[0];
+            current_value[key] = v[key];
+            return this.set(k, current_value);
+        },
+        object_slice: function(k, key){
+            var current_value = this.get(k);
+            if( (current_value instanceof Array) || (typeof(current_value) === "string") || (typeof(current_value) === "number") )return false;
+            delete current_value[key];
+            return this.set(k, current_value);
+        },
+        in_object : function(k, key){
+            var current_value = this.get(k);
+            if( (current_value instanceof Array) || (typeof(current_value) === "string") || (typeof(current_value) === "number") )return false;
+            return key in current_value;
         },
         clear: function(item) {
             return (arguments.length === 1 ? Storage.removeItem(APP_NAME + item) : Storage.clear());
