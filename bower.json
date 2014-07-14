@@ -1,6 +1,6 @@
 {
   "name": "LocalStorageAdapter",
-  "main": "LocalStorageAdapter.js",
+  "main": "LocalStorageAdapter.min.js",
   "version": "0.0.1",
   "homepage": "https://github.com/igorizr1/LocalStorageAdapter",
   "authors": [
