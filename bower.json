@@ -1,0 +1,17 @@
+{
+  "name": "LocalStorageAdapter",
+  "main": "LocalStorageAdapter.js",
+  "version": "0.0.0",
+  "homepage": "https://github.com/igorizr1/LocalStorageAdapter",
+  "authors": [
+    "igorizr1@gmail.com"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
