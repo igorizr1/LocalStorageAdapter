@@ -52,6 +52,13 @@ angular.module('LocalStorageAdapter', ["general.config"])
             current_value.push(v);
             return this.set(k, current_value);
         },
+        array_splice : function(k,key){
+            var current_value = this.get(k);
+            if( !current_value instanceof Array) return false;
+            var splised = current_value.splice(key,1);
+            this.set(k,current_value);
+            return splised;
+        },
         object_push : function(k, v){
             var current_value = this.get(k);
             if(empty(current_value))
